@@ -7,23 +7,23 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { steps } from "./steps";
-import React from "react";
+import {Fragment} from "react";
 
 interface BreadcrumbsProps {
   currentStep: string;
   setCurrentStep: (step: string) => void;
 }
 
-export default function Breadcrumbs({
+const Breadcrumbs = ({
   currentStep,
   setCurrentStep,
-}: BreadcrumbsProps) {
+}: BreadcrumbsProps) => {
   return (
     <div className="flex justify-center">
       <Breadcrumb>
         <BreadcrumbList>
           {steps.map((step) => (
-            <React.Fragment key={step.key}>
+            <Fragment key={step.key}>
               <BreadcrumbItem>
                 {step.key === currentStep ? (
                   <BreadcrumbPage>{step.title}</BreadcrumbPage>
@@ -36,10 +36,12 @@ export default function Breadcrumbs({
                 )}
               </BreadcrumbItem>
               <BreadcrumbSeparator className="last:hidden" />
-            </React.Fragment>
+            </Fragment>
           ))}
         </BreadcrumbList>
       </Breadcrumb>
     </div>
   );
 }
+
+export default Breadcrumbs

@@ -13,7 +13,7 @@ interface ColorPickerProps {
   onChange: ColorChangeHandler;
 }
 
-export default function ColorPicker({ color, onChange }: ColorPickerProps) {
+const ColorPicker = ({ color, onChange }: ColorPickerProps) => {
 
   const [showPopover, setShowPopover] = useState(false);
 
@@ -40,3 +40,5 @@ export default function ColorPicker({ color, onChange }: ColorPickerProps) {
     </Popover>
   );
 }
+
+export default ColorPicker

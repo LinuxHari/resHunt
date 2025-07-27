@@ -13,11 +13,11 @@ const inter = Poppins({
 
 export const metadata: Metadata = {
   title: {
-    template: "%s - AI Resume Builder",
-    absolute: "AI Resume Builder",
+    template: "%s - reshunt",
+    absolute: "reshunt",
   },
   description:
-    "AI Resume Builder is the easiest way to create a professional resume that will help you land your dream job.",
+    "Craft a standout resume effortlessly with AI — your first step toward the job you’ve always wanted.",
 };
 
 export default function RootLayout({

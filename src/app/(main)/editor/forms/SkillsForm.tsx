@@ -14,10 +14,10 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 
-export default function SkillsForm({
+const SkillsForm = ({
   resumeData,
   setResumeData,
-}: EditorFormProps) {
+}: EditorFormProps) => {
   const form = useForm<SkillsValues>({
     resolver: zodResolver(skillsSchema),
     defaultValues: {
@@ -77,3 +77,5 @@ export default function SkillsForm({
     </div>
   );
 }
+
+export default SkillsForm

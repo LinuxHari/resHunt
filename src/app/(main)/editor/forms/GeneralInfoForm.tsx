@@ -14,10 +14,10 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 
-export default function GeneralInfoForm({
+const GeneralInfoForm = ({
   resumeData,
   setResumeData,
-}: EditorFormProps) {
+}: EditorFormProps) => {
   const form = useForm<GeneralInfoValues>({
     resolver: zodResolver(generalInfoSchema),
     defaultValues: {
@@ -79,3 +79,5 @@ export default function GeneralInfoForm({
     </div>
   );
 }
+
+export default GeneralInfoForm

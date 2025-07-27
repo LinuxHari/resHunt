@@ -7,7 +7,7 @@ import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { saveResume } from "./actions";
 
-export default function useAutoSaveResume(resumeData: ResumeValues) {
+const useAutoSaveResume = (resumeData: ResumeValues) => {
   const searchParams = useSearchParams();
 
   const { toast } = useToast();
@@ -28,7 +28,7 @@ export default function useAutoSaveResume(resumeData: ResumeValues) {
   }, [debouncedResumeData]);
 
   useEffect(() => {
-    async function save() {
+    const save = async () => {
       try {
         setIsSaving(true);
         setIsError(false);
@@ -104,3 +104,5 @@ export default function useAutoSaveResume(resumeData: ResumeValues) {
       JSON.stringify(resumeData) !== JSON.stringify(lastSavedData),
   };
 }
+
+export default useAutoSaveResume

@@ -6,12 +6,12 @@ interface LoadingButtonProps extends ButtonProps {
   loading: boolean;
 }
 
-export default function LoadingButton({
+const LoadingButton = ({
   loading,
   disabled,
   className,
   ...props
-}: LoadingButtonProps) {
+}: LoadingButtonProps) => {
   return (
     <Button
       disabled={loading || disabled}
@@ -23,3 +23,5 @@ export default function LoadingButton({
     </Button>
   );
 }
+
+export default LoadingButton

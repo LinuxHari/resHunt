@@ -32,9 +32,9 @@ interface GenerateWorkExperienceButtonProps {
   onWorkExperienceGenerated: (workExperience: WorkExperience) => void;
 }
 
-export default function GenerateWorkExperienceButton({
+const GenerateWorkExperienceButton = ({
   onWorkExperienceGenerated,
-}: GenerateWorkExperienceButtonProps) {
+}: GenerateWorkExperienceButtonProps) => {
 
   const [showInputDialog, setShowInputDialog] = useState(false);
 
@@ -68,11 +68,11 @@ interface InputDialogProps {
   onWorkExperienceGenerated: (workExperience: WorkExperience) => void;
 }
 
-function InputDialog({
+const InputDialog = ({
   open,
   onOpenChange,
   onWorkExperienceGenerated,
-}: InputDialogProps) {
+}: InputDialogProps) => {
   const { toast } = useToast();
 
   const form = useForm<GenerateWorkExperienceInput>({
@@ -82,7 +82,7 @@ function InputDialog({
     },
   });
 
-  async function onSubmit(input: GenerateWorkExperienceInput) {
+  const onSubmit = async(input: GenerateWorkExperienceInput) => {
     try {
       const response = await generateWorkExperience(input);
       onWorkExperienceGenerated(response);
@@ -137,3 +137,5 @@ function InputDialog({
     </Dialog>
   );
 }
+
+export default GenerateWorkExperienceButton

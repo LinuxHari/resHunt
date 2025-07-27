@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-export default function useUnloadWarning(condition = true) {
+const useUnloadWarning = (condition = true) => {
   useEffect(() => {
     if (!condition) {
       return;
@@ -15,3 +15,5 @@ export default function useUnloadWarning(condition = true) {
     return () => window.removeEventListener("beforeunload", listener);
   }, [condition]);
 }
+
+export default useUnloadWarning

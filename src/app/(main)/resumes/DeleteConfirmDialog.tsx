@@ -23,7 +23,7 @@ const DeleteConfirmationDialog = ({ resumeId, open, onOpenChange }: DeleteConfir
   const { toast } = useToast()
   const [isPending, startTransition] = useTransition()
 
-  async function handleDelete() {
+  const handleDelete = async () => {
     startTransition(async () => {
       try {
         await deleteResume(resumeId)

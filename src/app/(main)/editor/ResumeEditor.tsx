@@ -16,7 +16,7 @@ interface ResumeEditorProps {
   resumeToEdit: ResumeServerData | null;
 }
 
-export default function ResumeEditor({ resumeToEdit }: ResumeEditorProps) {
+const ResumeEditor = ({ resumeToEdit }: ResumeEditorProps) => {
   const searchParams = useSearchParams();
 
   const [resumeData, setResumeData] = useState<ResumeValues>(
@@ -31,7 +31,7 @@ export default function ResumeEditor({ resumeToEdit }: ResumeEditorProps) {
 
   const currentStep = searchParams.get("step") || steps[0].key;
 
-  function setStep(key: string) {
+  const setStep = (key: string) => {
     const newSearchParams = new URLSearchParams(searchParams);
     newSearchParams.set("step", key);
     window.history.pushState(null, "", `?${newSearchParams.toString()}`);
@@ -84,3 +84,5 @@ export default function ResumeEditor({ resumeToEdit }: ResumeEditorProps) {
     </div>
   );
 }
+
+export default ResumeEditor

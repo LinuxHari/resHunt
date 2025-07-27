@@ -10,11 +10,11 @@ interface ResumePreviewSectionProps {
   className?: string;
 }
 
-export default function ResumePreviewSection({
+const ResumePreviewSection = ({
   resumeData,
   setResumeData,
   className,
-}: ResumePreviewSectionProps) {
+}: ResumePreviewSectionProps) => {
   return (
     <div
       className={cn("group relative hidden w-full md:flex md:w-1/2", className)}
@@ -42,3 +42,5 @@ export default function ResumePreviewSection({
     </div>
   );
 }
+
+export default ResumePreviewSection

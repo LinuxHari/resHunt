@@ -10,16 +10,16 @@ interface GenerateSummaryButtonProps {
   onSummaryGenerated: (summary: string) => void;
 }
 
-export default function GenerateSummaryButton({
+const GenerateSummaryButton = ({
   resumeData,
   onSummaryGenerated,
-}: GenerateSummaryButtonProps) {
+}: GenerateSummaryButtonProps) => {
 
   const { toast } = useToast();
 
   const [loading, setLoading] = useState(false);
 
-  async function handleClick() {
+  const handleClick = async () => {
 
     try {
       setLoading(true);
@@ -48,3 +48,5 @@ export default function GenerateSummaryButton({
     </LoadingButton>
   );
 }
+
+export default GenerateSummaryButton

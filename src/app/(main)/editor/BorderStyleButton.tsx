@@ -14,13 +14,13 @@ interface BorderStyleButtonProps {
   onChange: (borderStyle: string) => void;
 }
 
-export default function BorderStyleButton({
+const BorderStyleButton = ({
   borderStyle,
   onChange,
-}: BorderStyleButtonProps) {
+}: BorderStyleButtonProps) => {
 
 
-  function handleClick() {
+  const handleClick = () => {
 
     const currentIndex = borderStyle ? borderStyles.indexOf(borderStyle) : 0;
     const nextIndex = (currentIndex + 1) % borderStyles.length;
@@ -45,3 +45,5 @@ export default function BorderStyleButton({
     </Button>
   );
 }
+
+export default BorderStyleButton

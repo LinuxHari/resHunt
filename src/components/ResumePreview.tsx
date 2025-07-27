@@ -13,11 +13,11 @@ interface ResumePreviewProps {
   className?: string;
 }
 
-export default function ResumePreview({
+const ResumePreview = ({
   resumeData,
   contentRef,
   className,
-}: ResumePreviewProps) {
+}: ResumePreviewProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   const { width } = useDimensions(containerRef);
@@ -52,7 +52,7 @@ interface ResumeSectionProps {
   resumeData: ResumeValues;
 }
 
-function PersonalInfoHeader({ resumeData }: ResumeSectionProps) {
+const PersonalInfoHeader = ({ resumeData }: ResumeSectionProps) => {
   const {
     photo,
     firstName,
@@ -125,7 +125,7 @@ function PersonalInfoHeader({ resumeData }: ResumeSectionProps) {
   );
 }
 
-function SummarySection({ resumeData }: ResumeSectionProps) {
+const SummarySection = ({ resumeData }: ResumeSectionProps) => {
   const { summary, colorHex } = resumeData;
 
   if (!summary) return null;
@@ -153,7 +153,7 @@ function SummarySection({ resumeData }: ResumeSectionProps) {
   );
 }
 
-function WorkExperienceSection({ resumeData }: ResumeSectionProps) {
+const WorkExperienceSection = ({ resumeData }: ResumeSectionProps) => {
   const { workExperiences, colorHex } = resumeData;
 
   const workExperiencesNotEmpty = workExperiences?.filter(
@@ -204,7 +204,7 @@ function WorkExperienceSection({ resumeData }: ResumeSectionProps) {
   );
 }
 
-function EducationSection({ resumeData }: ResumeSectionProps) {
+const EducationSection = ({ resumeData }: ResumeSectionProps) => {
   const { educations, colorHex } = resumeData;
 
   const educationsNotEmpty = educations?.filter(
@@ -254,7 +254,7 @@ function EducationSection({ resumeData }: ResumeSectionProps) {
   );
 }
 
-function SkillsSection({ resumeData }: ResumeSectionProps) {
+const SkillsSection = ({ resumeData }: ResumeSectionProps) => {
   const { skills, colorHex, borderStyle } = resumeData;
 
   if (!skills?.length) return null;
@@ -299,3 +299,5 @@ function SkillsSection({ resumeData }: ResumeSectionProps) {
     </>
   );
 }
+
+export default ResumePreview

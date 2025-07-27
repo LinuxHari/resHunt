@@ -3,11 +3,11 @@ import { twMerge } from "tailwind-merge";
 import { ResumeServerData } from "./types";
 import { ResumeValues } from "./validation";
 
-export function cn(...inputs: ClassValue[]) {
+export const cn = (...inputs: ClassValue[]) => {
   return twMerge(clsx(inputs));
 }
 
-export function fileReplacer(key: unknown, value: unknown) {
+export const fileReplacer = (key: unknown, value: unknown) => {
   return value instanceof File
     ? {
         name: value.name,
@@ -18,7 +18,7 @@ export function fileReplacer(key: unknown, value: unknown) {
     : value;
 }
 
-export function mapToResumeValues(data: ResumeServerData): ResumeValues {
+export const mapToResumeValues = (data: ResumeServerData): ResumeValues => {
   return {
     id: data.id,
     title: data.title || undefined,

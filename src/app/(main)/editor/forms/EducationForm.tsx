@@ -34,10 +34,10 @@ import { GripHorizontal } from "lucide-react";
 import { useEffect } from "react";
 import { useFieldArray, useForm, UseFormReturn } from "react-hook-form";
 
-export default function EducationForm({
+const EducationForm = ({
   resumeData,
   setResumeData,
-}: EditorFormProps) {
+}: EditorFormProps) => {
   const form = useForm<EducationValues>({
     resolver: zodResolver(educationSchema),
     defaultValues: {
@@ -69,7 +69,7 @@ export default function EducationForm({
     }),
   );
 
-  function handleDragEnd(event: DragEndEvent) {
+  const handleDragEnd = (event: DragEndEvent) => {
     const { active, over } = event;
 
     if (over && active.id !== over.id) {
@@ -140,7 +140,7 @@ interface EducationItemProps {
   remove: (index: number) => void;
 }
 
-function EducationItem({ id, form, index, remove }: EducationItemProps) {
+const EducationItem = ({ id, form, index, remove }: EducationItemProps) => {
   const {
     attributes,
     listeners,
@@ -238,3 +238,5 @@ function EducationItem({ id, form, index, remove }: EducationItemProps) {
     </div>
   );
 }
+
+export default EducationForm

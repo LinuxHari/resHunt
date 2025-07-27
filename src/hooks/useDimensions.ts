@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 
-export default function useDimensions(
+const useDimensions = (
   containerRef: React.RefObject<HTMLElement>,
-) {
+) => {
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
 
   useEffect(() => {
     const currentRef = containerRef.current;
 
-    function getDimensions() {
+    const getDimensions = () => {
       return {
         width: currentRef?.offsetWidth || 0,
         height: currentRef?.offsetHeight || 0,
@@ -37,3 +37,5 @@ export default function useDimensions(
 
   return dimensions;
 }
+
+export default useDimensions;

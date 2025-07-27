@@ -14,10 +14,10 @@ import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import GenerateSummaryButton from "./GenerateSummaryButton";
 
-export default function SummaryForm({
+const SummaryForm = ({
   resumeData,
   setResumeData,
-}: EditorFormProps) {
+}: EditorFormProps) => {
   const form = useForm<SummaryValues>({
     resolver: zodResolver(summarySchema),
     defaultValues: {
@@ -72,3 +72,5 @@ export default function SummaryForm({
     </div>
   );
 }
+
+export default SummaryForm

@@ -14,10 +14,10 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useEffect, useRef } from "react";
 import { useForm } from "react-hook-form";
 
-export default function PersonalInfoForm({
+const PersonalInfoForm = ({
   resumeData,
   setResumeData,
-}: EditorFormProps) {
+}: EditorFormProps) => {
   const form = useForm<PersonalInfoValues>({
     resolver: zodResolver(personalInfoSchema),
     defaultValues: {
@@ -186,3 +186,5 @@ export default function PersonalInfoForm({
     </div>
   );
 }
+
+export default PersonalInfoForm

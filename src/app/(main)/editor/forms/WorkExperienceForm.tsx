@@ -37,10 +37,10 @@ import { useEffect } from "react";
 import { useFieldArray, useForm, UseFormReturn } from "react-hook-form";
 import GenerateWorkExperienceButton from "./GenerateWorkExperienceButton";
 
-export default function WorkExperienceForm({
+const WorkExperienceForm = ({
   resumeData,
   setResumeData,
-}: EditorFormProps) {
+}: EditorFormProps) => {
   const form = useForm<WorkExperienceValues>({
     resolver: zodResolver(workExperienceSchema),
     defaultValues: {
@@ -73,7 +73,7 @@ export default function WorkExperienceForm({
     }),
   );
 
-  function handleDragEnd(event: DragEndEvent) {
+  const handleDragEnd = (event: DragEndEvent) => {
     const { active, over } = event;
 
     if (over && active.id !== over.id) {
@@ -145,12 +145,12 @@ interface WorkExperienceItemProps {
   remove: (index: number) => void;
 }
 
-function WorkExperienceItem({
+const WorkExperienceItem = ({
   id,
   form,
   index,
   remove,
-}: WorkExperienceItemProps) {
+}: WorkExperienceItemProps) => {
   const {
     attributes,
     listeners,
@@ -272,3 +272,5 @@ function WorkExperienceItem({
     </div>
   );
 }
+
+export default WorkExperienceForm

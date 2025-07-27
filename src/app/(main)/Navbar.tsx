@@ -7,7 +7,7 @@ import { dark } from "@clerk/themes";
 import { Book } from "lucide-react";
 import { useTheme } from "next-themes";
 
-export default function Navbar() {
+const Navbar = () => {
   const { theme } = useTheme();
 
   const buttonAppearance = {
@@ -68,3 +68,5 @@ export default function Navbar() {
     </header>
   );
 }
+
+export default Navbar

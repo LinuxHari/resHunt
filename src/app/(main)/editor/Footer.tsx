@@ -12,13 +12,13 @@ interface FooterProps {
   isSaving: boolean;
 }
 
-export default function Footer({
+ const Footer = ({
   currentStep,
   setCurrentStep,
   showSmResumePreview,
   setShowSmResumePreview,
   isSaving,
-}: FooterProps) {
+}: FooterProps)  => {
   const previousStep = steps.find(
     (_, index) => steps[index + 1]?.key === currentStep,
   )?.key;
@@ -76,3 +76,5 @@ export default function Footer({
     </footer>
   );
 }
+
+export default Footer

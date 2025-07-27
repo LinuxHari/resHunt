@@ -10,7 +10,7 @@ import {
 } from "@/lib/validation";
 import { auth } from "@clerk/nextjs/server";
 
-export async function generateSummary(input: GenerateSummaryInput) {
+export const generateSummary = async (input: GenerateSummaryInput) => {
   const { userId } = await auth();
 
   if (!userId) {
@@ -72,9 +72,9 @@ export async function generateSummary(input: GenerateSummaryInput) {
   return aiResponse;
 }
 
-export async function generateWorkExperience(
+export const generateWorkExperience = async(
   input: GenerateWorkExperienceInput,
-) {
+) => {
   const { userId } = await auth();
 
   if (!userId) {
