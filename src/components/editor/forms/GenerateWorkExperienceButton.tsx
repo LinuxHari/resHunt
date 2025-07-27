@@ -1,4 +1,4 @@
-import LoadingButton from "@/components/LoadingButton";
+import LoadingButton from "@/components/shared/LoadingButton";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,

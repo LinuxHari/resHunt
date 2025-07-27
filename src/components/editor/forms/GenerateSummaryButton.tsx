@@ -1,9 +1,9 @@
-import LoadingButton from "@/components/LoadingButton";
 import { useToast } from "@/hooks/use-toast";
 import { ResumeValues } from "@/lib/validation";
 import { WandSparklesIcon } from "lucide-react";
 import { useState } from "react";
 import { generateSummary } from "./actions";
+import LoadingButton from "@/components/shared/LoadingButton";
 
 interface GenerateSummaryButtonProps {
   resumeData: ResumeValues;

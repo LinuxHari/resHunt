@@ -1,9 +1,8 @@
 import { Button } from "@/components/ui/button"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
-
 import { MoreVertical, Printer, Trash2 } from "lucide-react"
 import { useState } from "react"
-import DeleteConfirmationDialog from "./DeleteConfirmDialog"
+import DeleteConfirmationDialog from "@/components/resumes/DeleteConfirmDialog"
 
 interface MoreMenuProps {
   resumeId: string

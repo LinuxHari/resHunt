@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import Navbar from "./(main)/Navbar";
+import Navbar from "../components/shared/Navbar";
 
 const inter = Poppins({
   subsets: ["latin"],

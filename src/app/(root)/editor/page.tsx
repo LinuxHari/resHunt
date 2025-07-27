@@ -2,7 +2,7 @@ import prisma from "@/lib/prisma";
 import { resumeDataInclude } from "@/lib/types";
 import { auth } from "@clerk/nextjs/server";
 import { Metadata } from "next";
-import ResumeEditor from "./ResumeEditor";
+import ResumeEditor from "../../../components/editor/ResumeEditor";
 
 interface PageProps {
   searchParams: Promise<{ resumeId?: string }>;

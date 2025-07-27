@@ -6,11 +6,11 @@ import { cn, mapToResumeValues } from "@/lib/utils";
 import { ResumeValues } from "@/lib/validation";
 import { useSearchParams } from "next/navigation";
 import { useState } from "react";
-import Breadcrumbs from "./Breadcrumbs";
-import Footer from "./Footer";
+import Breadcrumbs from "@/components/editor/Breadcrumbs";
+import Footer from "@/components/editor/Footer";
 import ResumePreviewSection from "./ResumePreviewSection";
+import useAutoSaveResume from "@/hooks/useAutoSaveResume";
 import { steps } from "./steps";
-import useAutoSaveResume from "./useAutoSaveResume";
 
 interface ResumeEditorProps {
   resumeToEdit: ResumeServerData | null;

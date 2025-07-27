@@ -8,10 +8,10 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog"
 import { useToast } from "@/hooks/use-toast"
+import { deleteResume } from "@/lib/actions/resume.actions"
 
 import { Trash2, Loader2 } from "lucide-react"
 import { useTransition } from "react"
-import { deleteResume } from "./actions"
 
 interface DeleteConfirmationDialogProps {
   resumeId: string

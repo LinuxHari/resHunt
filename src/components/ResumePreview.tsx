@@ -1,15 +1,15 @@
-import { BorderStyles } from "@/app/(main)/editor/BorderStyleButton";
+import { BorderStyles } from "@/components/editor/BorderStyleButton";
 import useDimensions from "@/hooks/useDimensions";
 import { cn } from "@/lib/utils";
 import { ResumeValues } from "@/lib/validation";
 import { formatDate } from "date-fns";
 import Image from "next/image";
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, Ref } from "react";
 import { Badge } from "./ui/badge";
 
 interface ResumePreviewProps {
   resumeData: ResumeValues;
-  contentRef?: React.Ref<HTMLDivElement>;
+  contentRef?: Ref<HTMLDivElement>;
   className?: string;
 }
 

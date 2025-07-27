@@ -8,7 +8,7 @@ import { Calendar } from "lucide-react"
 import Link from "next/link"
 import { useRef } from "react"
 import { useReactToPrint } from "react-to-print"
-import MoreMenu from "./MoreMenu"
+import MoreMenu from "@/components/resumes/MoreMenu"
 interface ResumeItemProps {
   resume: ResumeServerData
 }

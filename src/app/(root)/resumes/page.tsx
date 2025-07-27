@@ -1,10 +1,10 @@
 import { FileText } from "lucide-react";
-import ResumeItem from "./ResumeItem";
+import ResumeItem from "@/components/resumes/ResumeItem";
 import { auth } from "@clerk/nextjs/server";
 import prisma from "@/lib/prisma";
 import { resumeDataInclude } from "@/lib/types";
-import CreateResumeButton from "./CreateResumeButton";
-import EmptyState from "./EmptyState";
+import CreateResumeButton from "@/components/resumes/CreateResumeButton";
+import EmptyState from "@/components/resumes/EmptyState";
 
 export default async function ResumesPage() {
   const { userId } = await auth();

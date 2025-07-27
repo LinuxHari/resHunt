@@ -5,7 +5,7 @@ import { fileReplacer } from "@/lib/utils";
 import { ResumeValues } from "@/lib/validation";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
-import { saveResume } from "./actions";
+import { saveResume } from "@/lib/actions/resume.actions";
 
 const useAutoSaveResume = (resumeData: ResumeValues) => {
   const searchParams = useSearchParams();
