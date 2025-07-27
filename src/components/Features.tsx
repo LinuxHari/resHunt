@@ -40,7 +40,7 @@ const Features = () => {
     <section className="py-24">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-gray-700 dark:text-white bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold py-5 bg-gradient-to-r from-gray-900 to-gray-700 dark:text-white bg-clip-text text-transparent">
             Everything You Need to Succeed
           </h2>
           <p className="text-xl text-gray-500 max-w-3xl mx-auto">
