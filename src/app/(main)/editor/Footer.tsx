@@ -43,6 +43,7 @@ export default function Footer({
           <Button
             onClick={nextStep ? () => setCurrentStep(nextStep) : undefined}
             disabled={!nextStep}
+            className="btn-primary"
           >
             Next step
           </Button>
@@ -64,7 +65,7 @@ export default function Footer({
           </Button>
           <p
             className={cn(
-              "text-gray-500 opacity-0",
+              "text-dark-gray opacity-0",
               isSaving && "opacity-100",
             )}
           >

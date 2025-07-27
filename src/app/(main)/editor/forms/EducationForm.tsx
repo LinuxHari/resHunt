@@ -114,6 +114,7 @@ export default function EducationForm({
           <div className="flex justify-center">
             <Button
               type="button"
+              className="btn-primary"
               onClick={() =>
                 append({
                   degree: "",

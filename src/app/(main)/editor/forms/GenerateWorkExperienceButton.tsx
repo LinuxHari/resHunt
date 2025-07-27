@@ -124,7 +124,11 @@ function InputDialog({
                 </FormItem>
               )}
             />
-            <LoadingButton type="submit" loading={form.formState.isSubmitting}>
+            <LoadingButton
+              type="submit"
+              className="btn-primary"
+              loading={form.formState.isSubmitting}
+            >
               Generate
             </LoadingButton>
           </form>

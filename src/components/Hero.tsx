@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { Button } from "./ui/button";
 
 const Hero = () => {
   return (
@@ -27,13 +28,15 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-            <Link
+            <Button asChild size="lg" className="btn-primary rounded-full text-lg">
+              <Link
               href="/resumes"
-              className="flex gap-x-1 items-center bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
+              className="flex gap-x-1 items-center group"
             >
               Start Building Free
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Link>
+            </Button>
           </div>
         </div>
       </div>

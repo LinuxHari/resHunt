@@ -5,7 +5,7 @@ const Logo = () => {
   return (
     <Link
       href="/"
-      className="group flex items-center gap-3 transition-all duration-200 hover:scale-[1.02]"
+      className="group flex items-center gap-3 transition-all duration-200"
     >
       <div className="flex items-center space-x-2">
         <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-r from-blue-600 to-purple-600">

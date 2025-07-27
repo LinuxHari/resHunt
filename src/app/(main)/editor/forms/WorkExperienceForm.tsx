@@ -118,6 +118,7 @@ export default function WorkExperienceForm({
           <div className="flex justify-center">
             <Button
               type="button"
+              className="btn-primary"
               onClick={() =>
                 append({
                   position: "",
