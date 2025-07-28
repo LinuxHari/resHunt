@@ -44,7 +44,7 @@ const ResumeEditor = ({ resumeToEdit }: ResumeEditorProps) => {
   return (
     <div className="flex grow flex-col bg-white dark:bg-black">
       <header className="space-y-1.5 border-b px-3 py-5 text-center">
-        <h1 className="text-2xl bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text font-bold text-transparent">Design your resume</h1>
+        <h1 className="text-2xl bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text font-bold text-transparent">Shape Your Future</h1>
         <p className="text-sm text-gray-500">
           Follow the steps below to create your resume. Your progress will be
           saved automatically.
