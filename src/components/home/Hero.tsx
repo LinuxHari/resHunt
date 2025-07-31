@@ -22,7 +22,7 @@ const Hero = () => {
             Build Your Perfect Resume in Minutes
           </h1>
 
-          <p className="text-xl md:text-2xl text-gray-500 mb-12 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-xl text-gray-500 mb-12 leading-relaxed max-w-3xl mx-auto">
             Create professional, ATS-friendly resumes with our AI-powered builder.
             Stand out from the crowd and land your dream job.
           </p>
