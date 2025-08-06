@@ -7,7 +7,7 @@ export const cn = (...inputs: ClassValue[]) => {
   return twMerge(clsx(inputs));
 }
 
-export const fileReplacer = (key: unknown, value: unknown) => {
+export const fileReplacer = (_: unknown, value: unknown) => {
   return value instanceof File
     ? {
         name: value.name,
